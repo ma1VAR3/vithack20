@@ -17,7 +17,7 @@ export const fetchdata2=async () => {
     try{
         const response= await axios.get("https://api.rootnet.in/covid19-in/notifications")
 
-        return response;
+        return response.data.data.notifications;
     }
     catch(error){
 
@@ -30,7 +30,7 @@ export const fetchdata3=async () => {
     try{
         const response= await axios.get("https://api.rootnet.in/covid19-in/hospitals/beds")
 
-        return response;
+        return response.data.data.regional;
     }
     catch(error){
 
@@ -42,7 +42,7 @@ export const fetchdata4=async () => {
     try{
         const response= await axios.get("https://api.rootnet.in/covid19-in/hospitals/medical-colleges")
 
-        return response;
+        return response.data.data.medicalColleges;
     }
     catch(error){
 
